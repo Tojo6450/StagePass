@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import { SignIn, SignUp } from '@clerk/clerk-react';
 
 // Import all your page components
@@ -13,7 +13,6 @@ import Confirmationpage from './components/attendee/Confirmation';
 import MyBookingsPage from './components/attendee/Dashboard';
 import AuthCallback from './Auth/AuthCallback';
 import EventForm from './components/organizer/EventForm';
-// import EventPreview from './components/organizer/EventPreview';
 import NotFoundPage from './helper/Notfound';
 import ProtectedRoute from './Auth/ProtectedRoute';
 import OrganizerDashboard from './components/organizer/Dashboard';
@@ -28,8 +27,9 @@ import Category from './components/attendee/Category';
 
 const App = () => {
   return (
-    <div className="pt-12">
+    <div className="pt-4">
       <Navbar />
+      <Toaster position="top-center" reverseOrder={false} />
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='/onboarding' element={<OnboardingPage />} />

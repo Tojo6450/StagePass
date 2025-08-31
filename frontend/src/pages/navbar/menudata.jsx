@@ -10,17 +10,7 @@ export const featuresMenu = {
     { id: "call-for-speakers", path: "/features/call-for-speakers", icon: <PlaceholderIcon />, title: "Call For Speakers", description: "Accept speaker proposals" },
     { id: "lead-capture", path: "/features/lead-capture", icon: <PlaceholderIcon />, title: "Lead Capture For Exhibitors", description: "Gather prospect information" },
   ],
-  cta: {
-    title: "Discover Tapin's powerful platform",
-    description: "Power your next conference, training or fully virtual experience.",
-    list: [
-      "Conferences & conventions",
-      "Online / Virtual Events",
-      "Training & Courses",
-      "Fundraisers",
-    ],
-    buttonText: "Talk to sales",
-  },
+  cta:null,
 };
 
 export const categoryMenu = {

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAppUser } from '../hooks/useAppUser';
+import { toast } from 'react-hot-toast';
 
 
 const ProtectedRoute = ({ children, allowedRoles }) => {
@@ -8,7 +9,7 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
 
   useEffect(() => {
     if (!isLoading && user && !allowedRoles.includes(user.role)) {
-      // toast.error("You do not have permission to view this page.");
+      toast.error("You do not have permission to view this page.");
     }
   }, [isLoading, user, allowedRoles]);
 

@@ -17,15 +17,6 @@ const userSchema = new mongoose.Schema({
     enum: ['attendee', 'organizer'],
     default: 'attendee',
   },
-  username: {
-    type: String,
-  },
-  firstName: {
-    type: String,
-  },
-  lastName: {
-    type: String,
-  },
   photo: {
     type: String,
   },

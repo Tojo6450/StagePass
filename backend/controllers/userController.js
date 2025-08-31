@@ -5,6 +5,7 @@ const User = require('../models/User.js');
  * @route   POST /api/users/webhook
  */
 const createUserOrUpdate = async (req, res) => {
+    // console.log("✅ Webhook received!"); 
   const { data } = req.body;
   // Destructure all available fields from the Clerk webhook data
   const { id, email_addresses, first_name, last_name, image_url, username } = data;
