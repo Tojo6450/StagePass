@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import EventCard from './EventCard'; 
-import { SearchIcon, FilterIcon } from '../../helper/Icons.jsx';
+import { SearchIcon, FilterIcon } from '../../helper/Icons.jsx'
 
 
 // --- Main AllEvents Page Component ---
