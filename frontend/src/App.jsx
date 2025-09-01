@@ -20,7 +20,7 @@ import ManageEventPage from './components/organizer/ManageEvent';
 import AttendeeListPage from './components/organizer/AttendeeList';
 import EventScannerPage from './components/organizer/EventScanner';
 import EventPreviewPage from './components/organizer/Eventpreview';
-import Footer from './pages/footer/footer';
+import Footer from './pages/footer/Footer';
 import Category from './components/attendee/Category';
 import FeaturePage from './pages/features/Feature';
 import WhyStagepass from './pages/WhyStagepass';
