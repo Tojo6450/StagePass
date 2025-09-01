@@ -5,7 +5,7 @@ import { SignIn, SignUp } from '@clerk/clerk-react';
 
 // Import all your page components
 import Navbar from './pages/navbar/Navbar';
-import LandingPage from './pages/landingpage/Landingpage';
+import LandingPage from './pages/landingpage/LandingPage';
 import OnboardingPage from './Auth/Onboardingpage';
 import EventDetailPage from './components/attendee/Eventdetails';
 import AllEvents from './components/attendee/AllEvents';
