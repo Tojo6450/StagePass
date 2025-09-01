@@ -36,7 +36,7 @@ export default function Navbar() {
     }
   }
 
-  navLinks.push({ name: "Why Tapin", href: "#" });
+ navLinks.push({ name: "Why StagePass", href: "/why-stagepass" });
   
   const handleOrganizerSignUp = () => {
     openSignUp({ afterSignUpUrl: '/onboarding' });
@@ -69,7 +69,7 @@ export default function Navbar() {
                 labelIcon={<TicketPlus width={15} />}
                 onClick={() => navigate("/my-bookings")}
               />
-            )}
+            )} 
           </UserButton.MenuItems>
         </UserButton>
       );
@@ -81,7 +81,7 @@ export default function Navbar() {
           Login
         </button>
         <button onClick={handleOrganizerSignUp} className="border border-cyan-400 text-cyan-400 px-5 py-2 rounded-full hover:bg-cyan-400 hover:text-black transition-colors">
-          Create your event
+          Create your account
         </button>
       </div>
     );
@@ -91,7 +91,7 @@ export default function Navbar() {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-200 px-4 sm:px-10 py-4 flex items-center justify-between font-sans">
         <a href="/" className="flex-shrink-0 flex items-center  text-2xl font-bold">
-          Tap<span className="text-cyan-400"> in</span>
+          Stage<span className="text-cyan-400">pass</span>
         </a>
 
         <ul className="hidden lg:flex items-center gap-7 text-lg font-medium">
@@ -143,7 +143,7 @@ export default function Navbar() {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 border-b">
             <a href="/" className="flex items-center gap-2 text-2xl font-bold text-black">
-              Tap<span className="text-cyan-400">in</span>
+              Stage<span className="text-cyan-400">pass</span>
             </a>
             <button onClick={() => setIsMobileMenuOpen(false)}>
               <CloseIcon />
@@ -195,7 +195,7 @@ export default function Navbar() {
                   Login
                 </button>
                 <button onClick={() => { handleOrganizerSignUp(); setIsMobileMenuOpen(false); }} className="w-full text-center py-3 text-lg font-medium bg-cyan-400 text-white rounded-lg">
-                  Create your event
+                  Create your account
                 </button>
               </>
             ) : (
@@ -220,4 +220,3 @@ export default function Navbar() {
     </>
   );
 }
-

@@ -3,24 +3,44 @@ import { PlaceholderIcon } from '../../helper/Icons';
 
 export const featuresMenu = {
   items: [
-    { id: "platform-overview", path: "/features/platform-overview", icon: <PlaceholderIcon />, title: "Platform Overview", description: "Manage all your events in one place" },
-    { id: "event-website-builder", path: "/features/event-website-builder", icon: <PlaceholderIcon />, title: "Event Website Builder", description: "Create branded, custom pages" },
-    { id: "event-registration", path: "/features/event-registration", icon: <PlaceholderIcon />, title: "Event Registration & Ticketing", description: "Simple registration, secure payments" },
-    { id: "event-agenda-builder", path: "/features/event-agenda-builder", icon: <PlaceholderIcon />, title: "Event Agenda Builder", description: "Multi-track interactive agenda" },
-    { id: "call-for-speakers", path: "/features/call-for-speakers", icon: <PlaceholderIcon />, title: "Call For Speakers", description: "Accept speaker proposals" },
-    { id: "lead-capture", path: "/features/lead-capture", icon: <PlaceholderIcon />, title: "Lead Capture For Exhibitors", description: "Gather prospect information" },
-  ],
-  cta: {
-    title: "Discover Tapin's powerful platform",
-    description: "Power your next conference, training or fully virtual experience.",
-    list: [
-      "Conferences & conventions",
-      "Online / Virtual Events",
-      "Training & Courses",
-      "Fundraisers",
-    ],
-    buttonText: "Talk to sales",
+  { 
+    id: "platform-overview", 
+    path: "/features/platform-overview", 
+    icon: <PlaceholderIcon />, 
+    title: "Platform Overview", 
+    description: "Manage all your events in one place" 
   },
+  { 
+    id: "event-analytics", 
+    path: "/features/event-analytics", 
+    icon: <PlaceholderIcon />, 
+    title: "Event Analytics", 
+    description: "Track and analyze event performance" 
+  },
+  { 
+    id: "quick-check-in", 
+    path: "/features/quick-check-in", 
+    icon: <PlaceholderIcon />, 
+    title: "Quick Check-In", 
+    description: "Fast and secure attendee check-in" 
+  },
+  { 
+    id: "sell-tickets", 
+    path: "/features/sell-tickets", 
+    icon: <PlaceholderIcon />, 
+    title: "Ticket Sales", 
+    description: "Easily sell and manage attendee tickets" 
+  },
+  { 
+    id: "smart-tickets", 
+    path: "/features/smart-tickets", 
+    icon: <PlaceholderIcon />, 
+    title: "Smart Tickets", 
+    description: "Offer intelligent, flexible ticketing options" 
+  },
+]
+,
+  cta:null,
 };
 
 export const categoryMenu = {

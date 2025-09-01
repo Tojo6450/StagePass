@@ -1,13 +1,7 @@
 const User = require('../models/User.js');
 
-/**
- * @desc    Create/update a user from a Clerk webhook
- * @route   POST /api/users/webhook
- */
 const createUserOrUpdate = async (req, res) => {
-    // console.log("✅ Webhook received!"); 
   const { data } = req.body;
-  // Destructure all available fields from the Clerk webhook data
   const { id, email_addresses, first_name, last_name, image_url, username } = data;
 
   if (!id || !email_addresses) {
@@ -20,7 +14,6 @@ const createUserOrUpdate = async (req, res) => {
       {
         clerkId: id,
         email: email_addresses[0].email_address,
-        // Add the missing fields to be saved in the database
         firstName: first_name,
         lastName: last_name,
         username: username,
@@ -34,10 +27,6 @@ const createUserOrUpdate = async (req, res) => {
   }
 };
 
-/**
- * @desc    Set the role for a newly onboarded user
- * @route   POST /api/users/set-role
- */
 const setUserRole = async (req, res) => {
   const { clerkId, role } = req.body;
 
@@ -64,10 +53,6 @@ const setUserRole = async (req, res) => {
   }
 };
 
-/**
- * @desc    Get the current user's profile from the database
- * @route   GET /api/users/me
- */
 const getMyProfile = async (req, res) => {
   const { clerkId } = req.query;
 

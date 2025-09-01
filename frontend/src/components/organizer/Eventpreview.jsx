@@ -7,7 +7,6 @@ import EventPreviewCard from "./EventPreviewCard.jsx";
 
 // --- Main Page Component ---
 const EventPreviewPage = () => {
-  const [copyButtonText, setCopyButtonText] = useState("Copy Event Link");
   const [showConfetti, setShowConfetti] = useState(true);
   const location = useLocation();
 
@@ -21,14 +20,6 @@ const EventPreviewPage = () => {
   if (!newEvent) {
     return <Navigate to="/" replace />;
   }
-
-  const handleCopyLink = () => {
-    const eventUrl = `${window.location.origin}/events/${newEvent._id}`;
-    navigator.clipboard.writeText(eventUrl).then(() => {
-      setCopyButtonText("Copied!");
-      setTimeout(() => setCopyButtonText("Copy Event Link"), 2000);
-    });
-  };
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden pt-24">
@@ -52,25 +43,19 @@ const EventPreviewPage = () => {
           
           <div className="w-full max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
-              to={`/events/${newEvent._id}`}
+              to={`/manage-event/${newEvent._id}`}
               className="group flex items-center justify-center w-full bg-cyan-500 text-black font-bold px-6 py-4 rounded-lg transition-all duration-300 hover:bg-cyan-600"
             >
               <EyeIcon className="h-6 w-6 mr-3" />
               View Live Event Page
             </Link>
-            <button
-              onClick={handleCopyLink}
-              className="group flex items-center justify-center w-full bg-gray-800/50 border border-gray-700 text-white font-semibold px-6 py-4 rounded-lg transition-all duration-300 hover:border-cyan-500"
-            >
-              <LinkIcon className="h-6 w-6 mr-3 text-gray-400 group-hover:text-cyan-400" />
-              {copyButtonText}
-            </button>
+
             <Link
               to="/organizer-dashboard"
               className="sm:col-span-2 group flex items-center justify-center w-full bg-gray-800/50 border border-gray-700 text-white font-semibold px-6 py-4 rounded-lg transition-all duration-300 hover:border-cyan-500"
             >
               <DashboardIcon className="h-6 w-6 mr-3 text-gray-400 group-hover:text-cyan-400" />
-              Go to Organizer Dashboard
+              Go to Dashboard
             </Link>
           </div>
         </div>

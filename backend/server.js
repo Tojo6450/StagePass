@@ -20,9 +20,9 @@ app.use(express.json());
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log('✅ MongoDB connected successfully!');
+    console.log('MongoDB connected successfully!');
   } catch (error) {
-    console.error(`❌ Error connecting to MongoDB: ${error.message}`);
+    console.error(`Error connecting to MongoDB: ${error.message}`);
     process.exit(1);
   }
 };
@@ -35,9 +35,9 @@ app.use('/api/organizer', organizerRoutes);
 app.use('/api/payments', paymentRoutes);
 
 app.get('/', (req, res) => {
-  res.send('EventZilla API is running...');
+  res.send('Stagepass API is running...');
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running on http://localhost:${PORT}`);
+  console.log(` Server is running on ${PORT}`);
 });

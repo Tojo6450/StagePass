@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import { SignIn, SignUp } from '@clerk/clerk-react';
 
 // Import all your page components
@@ -13,7 +13,6 @@ import Confirmationpage from './components/attendee/Confirmation';
 import MyBookingsPage from './components/attendee/Dashboard';
 import AuthCallback from './Auth/AuthCallback';
 import EventForm from './components/organizer/EventForm';
-// import EventPreview from './components/organizer/EventPreview';
 import NotFoundPage from './helper/Notfound';
 import ProtectedRoute from './Auth/ProtectedRoute';
 import OrganizerDashboard from './components/organizer/Dashboard';
@@ -23,22 +22,26 @@ import EventScannerPage from './components/organizer/EventScanner';
 import EventPreviewPage from './components/organizer/Eventpreview';
 import Footer from './pages/footer/footer';
 import Category from './components/attendee/Category';
-// import Feature from './components/features/Features';
+import FeaturePage from './pages/features/Feature';
+import WhyStagepass from './pages/WhyStagepass';
+
 
 
 const App = () => {
   return (
     <div className="pt-12">
       <Navbar />
+      <Toaster position="top-center" reverseOrder={false} />
       <Routes>
         <Route path='/' element={<LandingPage />} />
+        <Route path='/why-stagepass' element={<WhyStagepass />} />
         <Route path='/onboarding' element={<OnboardingPage />} />
         <Route path='/auth-callback' element={<AuthCallback />} />
         <Route path="/sign-in/*" element={<SignIn routing="path" path="/sign-in" afterSignInUrl="/auth-callback" />} />
         <Route path="/sign-up/*" element={<SignUp routing="path" path="/sign-up" afterSignUpUrl="/onboarding" />} />
         <Route path='/allevents' element={<AllEvents />} />
         <Route path='/category/:categoryId' element={<Category />} />
-        {/* <Route path='/features/:featureId' element={<Feature />} /> */}
+        <Route path='/features/:featureId' element={<FeaturePage />} />
         <Route path='/events/:eventId' element={<EventDetailPage />} />
         <Route path='/confirmation' element={<Confirmationpage />} />
         <Route path='/my-bookings' element={

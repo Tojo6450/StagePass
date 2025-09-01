@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useUser } from "@clerk/clerk-react";
-import DashboardLayout from "../../components/organizer/DashboardLayout";
+import DashboardLayout from "./DashboardLayout";
 import { 
     DashboardSection, 
     EventsListSection, 
     RevenueAnalyticsSection 
-} from "../../components/organizer/DashboardComponents";
+} from "./DashboardComponents";
 import { DashboardIcon,CalendarIcon,HistoryIcon,ChartBarIcon,LiveIcon } from "../../helper/Icons";
 
 
@@ -42,20 +42,6 @@ export default function OrganizerDashboard() {
     fetchData();
   }, [user]);
   
-  const handleDeleteEvent = async (eventId) => {
-    if (!window.confirm("Are you sure you want to delete this event? This action cannot be undone.")) return;
-    try {
-      const response = await fetch(`/api/organizer/my-events/${eventId}`, {
-        method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ clerkId: user.id })
-      });
-      if (!response.ok) throw new Error('Failed to delete the event.');
-      setEvents(prevEvents => prevEvents.filter(event => event._id !== eventId));
-    } catch (err) {
-      console.error("Error deleting event:", err);
-    }
-  };
 
   const navItems = [ 
     { id: "dashboard", label: "Dashboard", icon: DashboardIcon }, 
@@ -75,12 +61,11 @@ export default function OrganizerDashboard() {
     const past = events.filter(e => new Date(e.endDateTime) < now);
 
     switch (activeSection) {
-      case "dashboard": return <DashboardSection events={events} handleDeleteEvent={handleDeleteEvent} />;
+      case "dashboard": return <DashboardSection events={events} />;
       case "live": return <EventsListSection title="Live Events" events={live} />;
       case "upcoming": return <EventsListSection title="Upcoming Events" events={upcoming} />;
       case "past": return <EventsListSection title="Past Events" events={past} />;
       case "analytics": return analytics ? <RevenueAnalyticsSection analytics={analytics} /> : <div>Loading analytics...</div>;
-      default: return <DashboardSection events={events} handleDeleteEvent={handleDeleteEvent} />;
     }
   };
 
