@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAppUser } from '../hooks/useAppUser'; 
 
 const AuthCallback = () => {
-  const { user, isLoading } = useAppUser();
+  const { user, isLoading } = useAppUser()
   const navigate = useNavigate();
 
   useEffect(() => {
