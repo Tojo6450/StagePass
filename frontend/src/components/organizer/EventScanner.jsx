@@ -4,18 +4,15 @@ import { Html5Qrcode } from "html5-qrcode";
 import { useUser } from "@clerk/clerk-react";
 import { CheckCircleIcon, ExclamationCircleIcon, XCircleIcon } from "../../helper/Icons.jsx";
 
-// --- Result Overlay Component (Corrected) ---
 const ScanResultOverlay = ({ result, onClear }) => {
-  // useEffect must be called at the top level, before any returns.
+
   useEffect(() => {
-    // The logic to set the timer is now inside the hook.
     if (result) {
       const timer = setTimeout(onClear, 3000);
       return () => clearTimeout(timer);
     }
   }, [result, onClear]);
 
-  // The early return is now safe.
   if (!result) return null;
 
   const resultStyles = { 
@@ -50,7 +47,7 @@ const EventScannerPage = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/organizer/tickets/verify", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/organizer/tickets/verify`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ qrCodeData, eventId, clerkId: user.id }),

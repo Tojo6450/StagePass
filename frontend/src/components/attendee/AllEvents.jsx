@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import EventCard from './EventCard'; // <-- Import the new component
+import EventCard from './EventCard'; 
 import { SearchIcon, FilterIcon } from '../../helper/Icons.jsx';
 
 
@@ -14,7 +14,7 @@ const AllEvents = () => {
     const fetchAllEvents = async () => {
       try {
         setLoading(true);
-        const apiUrl = `/api/events?search=${searchTerm}`;
+        const apiUrl = `${import.meta.env.VITE_API_URL}/api/events?search=${searchTerm}`;
         const response = await fetch(apiUrl);
         if (!response.ok) {
           throw new Error('Could not fetch events.');

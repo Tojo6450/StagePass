@@ -25,8 +25,8 @@ export default function OrganizerDashboard() {
         try {
             setLoading(true);
             const [eventsRes, analyticsRes] = await Promise.all([
-                fetch(`/api/organizer/my-events?clerkId=${user.id}`),
-                fetch(`/api/organizer/analytics?clerkId=${user.id}`)
+                fetch(`${import.meta.env.VITE_API_URL}/api/organizer/my-events?clerkId=${user.id}`),
+                fetch(`${import.meta.env.VITE_API_URL}/api/organizer/analytics?clerkId=${user.id}`)
             ]);
             if (!eventsRes.ok || !analyticsRes.ok) throw new Error('Failed to fetch dashboard data.');
             const eventsData = await eventsRes.json();
