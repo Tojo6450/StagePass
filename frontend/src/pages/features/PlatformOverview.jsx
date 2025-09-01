@@ -1,8 +1,8 @@
 import React from "react";
 import ReusableHero from "../reusable/ReusableHero";
-import RightSection from "../reusable/ReusableHero";
-import LeftSection from "../reusable/ReusableHero";
-import CardHighlights from "../reusable/ReusableHero";
+import RightSection from "../reusable/RightSection";
+import LeftSection from "../reusable/LeftSection";
+import CardHighlights from "../reusable/CardHighlights";
 export default function PlatformOverview() {
   // Custom data for each section of this specific page
   const heroData = {

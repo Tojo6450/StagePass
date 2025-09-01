@@ -29,7 +29,7 @@ import WhyStagepass from './pages/WhyStagepass';
 
 const App = () => {
   return (
-    <div className="pt-12">
+    <div className="pt-4">
       <Navbar />
       <Toaster position="top-center" reverseOrder={false} />
       <Routes>

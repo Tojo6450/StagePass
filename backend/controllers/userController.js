@@ -1,9 +1,5 @@
 const User = require('../models/User.js');
 
-/**
- * @desc    Create/update a user from a Clerk webhook
- * @route   POST /api/users/webhook
- */
 const createUserOrUpdate = async (req, res) => {
     // console.log("✅ Webhook received!"); 
   const { data } = req.body;
@@ -34,10 +30,6 @@ const createUserOrUpdate = async (req, res) => {
   }
 };
 
-/**
- * @desc    Set the role for a newly onboarded user
- * @route   POST /api/users/set-role
- */
 const setUserRole = async (req, res) => {
   const { clerkId, role } = req.body;
 

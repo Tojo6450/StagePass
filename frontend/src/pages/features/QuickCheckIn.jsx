@@ -1,8 +1,8 @@
 import React from "react";
 import ReusableHero from "../reusable/ReusableHero";
-import RightSection from "../reusable/ReusableHero";
-import LeftSection from "../reusable/ReusableHero";
-import FAQSection from "../reusable/ReusableHero";
+import RightSection from "../reusable/RightSection";
+import LeftSection from "../reusable/LeftSection";
+import FAQSection from "../reusable/FAQsection";
 export default function QuickCheckIn() {
   const heroData = {
     preTitle: "Simplify Your Event Day",

@@ -38,10 +38,9 @@ export const featuresMenu = {
     title: "Smart Tickets", 
     description: "Offer intelligent, flexible ticketing options" 
   },
-]
-,
-  cta:null,
-};
+],
+cta:null,}
+
 
 export const categoryMenu = {
   items: [
