@@ -12,7 +12,7 @@ const OnboardingPage = () => {
     if (!user) return;
 
     setLoading(true);
-    setError('');
+    setError('')
 
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/set-role`, {
