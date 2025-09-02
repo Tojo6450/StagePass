@@ -44,7 +44,7 @@ const UpcomingEventsSection = () => {
     const fetchUpcomingEvents = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/api/events');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/events`);
         if (!response.ok) {
           throw new Error('Could not fetch events.');
         }
