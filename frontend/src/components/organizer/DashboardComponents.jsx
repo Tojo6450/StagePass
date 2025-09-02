@@ -42,7 +42,7 @@ export const EventCard = ({ event }) => {
   const eventDate = new Date(event.startDateTime).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
 
   return (
-    <Link to={`${import.meta.env.VITE_API_URL}/manage-event/${event._id}`} className="group relative block h-full transform transition-transform duration-500 ease-in-out hover:scale-105">
+    <Link to={`/manage-event/${event._id}`} className="group relative block h-full transform transition-transform duration-500 ease-in-out hover:scale-105">
       <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 opacity-0 blur transition duration-500 group-hover:opacity-75"></div>
       <div className="relative h-full overflow-hidden rounded-2xl bg-gradient-to-b from-gray-900 to-black">
         <img src={event.bannerImageUrl || 'https://placehold.co/600x400/000000/FFFFFF?text=Event'} alt={event.title} className="w-full h-48 object-cover" />
