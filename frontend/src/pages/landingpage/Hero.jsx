@@ -15,7 +15,7 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20"></div>
 
-      <div className="container mx-auto px-4 py-12 sm:py-32 lg:py-40 relative z-10">
+      <div className="container mx-auto px-4 py-8 sm:py-20 lg:py-24 relative z-10">
         <div className="flex flex-col items-center text-center">
           <div className="group mb-6">
             <div className="relative inline-block">

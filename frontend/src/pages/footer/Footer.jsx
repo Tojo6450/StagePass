@@ -51,13 +51,13 @@ const footerLinks = [
     ],
   },
   {
-    title: "About Eventzilla",
+    title: "About StagePass",
     sections: [
       {
         subtitle: null,
         links: [
           "About",
-          "Eventzilla Blog",
+          "StagePass Blog",
           "Resources",
           "Contact Us",
           "Help Desk",
@@ -221,7 +221,7 @@ export default function Footer() {
       {/* --- Footer Bottom Bar --- */}
       <div className="bg-gray-900 py-4">
         <div className="container mx-auto px-4 text-center text-sm">
-          <p>&copy; {year} TapIn. All Rights Reserved.</p>
+          <p>&copy; {year} StagePass. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

@@ -11,7 +11,7 @@ const eventSchema = new mongoose.Schema({
   },
   bannerImageUrl: {
     type: String,
-    default: 'https://placehold.co/1200x400/000000/FFFFFF?text=Satgepass',
+    default: 'https://placehold.co/1200x400/000000/FFFFFF?text=Stagepass',
   },
   category: {
     type: String,
