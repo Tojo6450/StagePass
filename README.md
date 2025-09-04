@@ -6,17 +6,6 @@ Organizers get a powerful dashboard with real-time analytics and a QR code scann
 
 ---
 
-## 📸 Demo / Screenshots
-
-- **Event Discovery Page** – Browse and search for upcoming events  
-- **Event Details Page** – View all event info and book tickets  
-- **Organizer Dashboard** – Manage events and track sales in real time  
-- **Booking Confirmation** – Attendees receive a unique QR code ticket  
-
-*(Add screenshots here once available)*
-
----
-
 ## ✨ Features
 
 ### 🎭 For Attendees
