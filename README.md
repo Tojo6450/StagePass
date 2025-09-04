@@ -1,56 +1,58 @@
-﻿StagePass - Full-Stack Event Ticketing Platform
-[Live Demo Link Here] <!-- Replace with your live Vercel URL -->
-
-StagePass is an all-in-one platform for creating and experiencing live events. Organizers get a powerful dashboard with real-time analytics and a QR code scanner, while attendees enjoy secure payments with Razorpay and instant digital tickets for a seamless experience.
-
-Demo / Screenshots
-The main event discovery page where users can browse and search for events.
-
-The detailed view for a single event, showing all necessary information and the booking button.
-
-The comprehensive dashboard for event organizers, featuring real-time sales data and event management tools.
-
-The confirmation page attendees see after a successful booking, complete with their unique QR code ticket.
-
-✨ Features
-For Attendees
-Event Discovery: Browse a list of all available events, grouped by category.
-
-Search & Filter: Find specific events by searching for titles or locations.
-
-Secure Payments: Purchase tickets seamlessly using the integrated Razorpay payment gateway.
-
-Instant Digital Tickets: Receive a unique, scannable QR code ticket upon successful booking.
-
-Personal Dashboard: View and manage all upcoming and past event bookings in a dedicated "My Bookings" dashboard.
-
-Role-Based Authentication: A secure sign-up and sign-in flow powered by Clerk, with a one-time role selection for new users.
-
-For Organizers
-Full CRUD for Events: Create, read, update, and delete events through a secure, role-protected interface.
-
-Image Uploads: Upload event banner images directly to a Cloudinary CDN.
-
-AI-Powered Content Generation: Automatically generate compelling event descriptions using the Gemini API.
-
-Comprehensive Dashboard: A dedicated dashboard to view all created events (upcoming, live, and past).
-
-Real-Time Analytics: Track total revenue, tickets sold, and other key metrics with visual charts.
-
-Attendee Management: View a detailed list of all attendees for a specific event.
-
-QR Code Scanner: A built-in ticket scanner to verify attendees and manage check-ins at the venue.
+﻿# 🎟️ StagePass - Full-Stack Event Ticketing Platform
 
 
-🛠️ Tech Stack
+StagePass is an all-in-one platform for **creating** and **experiencing live events**.  
+Organizers get a powerful dashboard with real-time analytics and a QR code scanner, while attendees enjoy **secure payments** with Razorpay and **instant digital tickets** for a seamless event experience.
 
-| Category        | Technology / Service |
-|-----------------|-----------------------|
-| **Frontend**    | React, Vite, Tailwind CSS, React Router, Recharts |
-| **Backend**     | Node.js, Express.js |
-| **Database**    | MongoDB with Mongoose (hosted on MongoDB Atlas) |
-| **Authentication** | Clerk |
-| **Payments**    | Razorpay |
+---
+
+## 📸 Demo / Screenshots
+
+- **Event Discovery Page** – Browse and search for upcoming events  
+- **Event Details Page** – View all event info and book tickets  
+- **Organizer Dashboard** – Manage events and track sales in real time  
+- **Booking Confirmation** – Attendees receive a unique QR code ticket  
+
+*(Add screenshots here once available)*
+
+---
+
+## ✨ Features
+
+### 🎭 For Attendees
+- **Event Discovery**: Browse a list of all available events, grouped by category  
+- **Search & Filter**: Quickly find events by title or location  
+- **Secure Payments**: Seamlessly purchase tickets via **Razorpay**  
+- **Instant Digital Tickets**: Receive a unique, scannable **QR code ticket** upon booking  
+- **Personal Dashboard**: Manage upcoming and past bookings in “My Bookings”  
+- **Role-Based Authentication**: Secure sign-up/login powered by **Clerk**, with role selection  
+
+### 🎤 For Organizers
+- **Full CRUD for Events**: Create, update, and manage events with RBAC  
+- **Image Uploads**: Upload event banners directly to **Cloudinary**  
+- **AI-Powered Content**: Generate compelling event descriptions using the **Gemini API**  
+- **Comprehensive Dashboard**: Track upcoming, live, and past events  
+- **Real-Time Analytics**: Visualize revenue, ticket sales, and metrics with **Recharts**  
+- **Attendee Management**: View and manage event attendees  
+- **QR Code Scanner**: Built-in scanner to verify tickets and manage check-ins  
+
+---
+
+## 🛠️ Tech Stack
+
+StagePass is built with a **modern and scalable stack** to deliver a smooth experience:
+
+| Category          | Technology / Service |
+|-------------------|-----------------------|
+| **Frontend**      | React, Vite, Tailwind CSS, React Router, Recharts |
+| **Backend**       | Node.js, Express.js |
+| **Database**      | MongoDB with Mongoose (hosted on MongoDB Atlas) |
+| **Authentication**| Clerk |
+| **Payments**      | Razorpay |
 | **Image Hosting** | Cloudinary |
-| **Deployment**  | Frontend: Vercel, Backend: Render |
-| **API**        | Gemini API for AI-generated content |
+| **Deployment**    | Frontend: Vercel, Backend: Render |
+| **API**           | Gemini API for AI-generated content |
+
+---
+
+
