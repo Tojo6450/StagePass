@@ -92,7 +92,6 @@ const Ticket = ({ event, ticket }) => {
             Scan at Entry
           </h2>
           
-          {/* --- QR CODE IMAGE --- */}
           <div className="bg-white p-2 rounded-lg">
             <img 
               src={ticket.qrCodeUrl} 
