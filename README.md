@@ -44,4 +44,24 @@ StagePass is built with a **modern and scalable stack** to deliver a smooth expe
 
 ---
 
+## 🏗️ Architecture / Workflow
+
+The workflow below explains how StagePass operates for both **attendees** and **organizers**.
+
+```mermaid
+flowchart TD
+    A[Attendee / Organizer] -->|Login / Signup| B[Clerk Authentication]
+    B --> C[React Frontend (Vite + Tailwind)]
+    C -->|API Requests| D[Express.js Backend]
+    D --> E[MongoDB Atlas Database]
+    D --> F[Razorpay Payments]
+    D --> G[Cloudinary Image Hosting]
+    D --> H[Gemini API - AI Descriptions]
+    D --> I[QR Code Generator]
+    I --> J[Digital Ticket with QR]
+    E --> K[Organizer Dashboard]
+    F --> K
+    J --> K
+    K -->|Charts / Metrics| L[Recharts Analytics]
+
 
