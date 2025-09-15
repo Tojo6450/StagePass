@@ -50,30 +50,24 @@ const HeroSection = () => {
             boost registrations, manage sessions, engage attendees, and simplify check-in, without the steep learning curve or enterprise price tag.
           </p>
 
-          {/* Enhanced badges/indicators with better interactions */}
+          {/* Simple text indicators without button styling */}
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative flex items-center space-x-3 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/40 backdrop-blur-sm hover:border-cyan-400/60 hover:scale-105 transition-all duration-300">
-                <div className="relative">
-                  <div className="w-3 h-3 bg-cyan-400 rounded-full animate-ping absolute"></div>
-                  <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
-                </div>
-                <span className="text-cyan-300 font-bold text-sm sm:text-base">Live Event Management</span>
+            <div className="flex items-center space-x-3">
+              <div className="relative">
+                <div className="w-3 h-3 bg-cyan-400 rounded-full animate-ping absolute"></div>
+                <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
               </div>
+              <span className="text-cyan-300 font-bold text-sm sm:text-base">Live Event Management</span>
             </div>
             
-            <div className="group relative">
-              <div className="flex items-center space-x-3 px-6 py-4 rounded-full bg-gradient-to-r from-gray-800/80 to-gray-700/80 border border-gray-600/60 backdrop-blur-sm hover:border-gray-500 hover:bg-gradient-to-r hover:from-gray-700/80 hover:to-gray-600/80 hover:scale-105 transition-all duration-300">
-                <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-white font-bold text-sm sm:text-base">Mobile Ready</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
               </div>
+              <span className="text-white font-bold text-sm sm:text-base">Mobile Ready</span>
             </div>
-            
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { SignIn, SignUp } from '@clerk/clerk-react';
+
 
 // Import all your page components
 import Navbar from './pages/navbar/Navbar';
@@ -24,6 +24,8 @@ import Footer from './pages/footer/Footer';
 import Category from './components/attendee/Category';
 import FeaturePage from './pages/features/Feature';
 import WhyStagepass from './pages/WhyStagepass';
+import SignInPage from './Auth/SignIn';
+import SignUpPage from './Auth/SignUp';
 
 
 
@@ -37,8 +39,8 @@ const App = () => {
         <Route path='/why-stagepass' element={<WhyStagepass />} />
         <Route path='/onboarding' element={<OnboardingPage />} />
         <Route path='/auth-callback' element={<AuthCallback />} />
-        <Route path="/sign-in/*" element={<SignIn routing="path" path="/sign-in" afterSignInUrl="/auth-callback" />} />
-        <Route path="/sign-up/*" element={<SignUp routing="path" path="/sign-up" afterSignUpUrl="/onboarding" />} />
+        <Route path="/sign-in/*" element={<SignInPage />} />
+        <Route path="/sign-up/*" element={<SignUpPage />} />
         <Route path='/allevents' element={<AllEvents />} />
         <Route path='/category/:categoryId' element={<Category />} />
         <Route path='/features/:featureId' element={<FeaturePage />} />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -36,13 +37,13 @@ export default function GettingStarted() {
                 Effortless registration and ticketing, because first impressions
                 matter.
               </p>
+         <Link
+           to="/why-stagepass"
+          className="group mt-8 inline-flex items-center justify-center rounded-full border-2 border-gray-600 px-7 py-2.5 text-sm font-bold text-gray-200 transition-all duration-300 ease-in-out hover:bg-cyan-500 hover:text-white hover:border-cyan-500"
+         >
+         Learn more
+         </Link>
 
-              <a
-                href="#"
-                className="group mt-8 inline-flex items-center justify-center rounded-full border-2 border-gray-600 px-7 py-2.5 text-sm font-bold text-gray-200 transition-all duration-300 ease-in-out hover:bg-cyan-500 hover:text-white hover:border-cyan-500"
-              >
-                Learn more
-              </a>
             </div>
 
             {/* Right Column: Image (order-first on mobile to appear below text) */}
