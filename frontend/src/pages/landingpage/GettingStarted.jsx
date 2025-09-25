@@ -8,9 +8,7 @@ export default function GettingStarted() {
     <div className="bg-black py-10">
       <section className="bg-black text-white py-16 sm:py-24">
         <div className="container mx-auto px-4">
-          {/* Main container: flex-col on mobile, row on large screens */}
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-            {/* Left Column: Text Content */}
             <div className="text-center lg:text-left lg:w-1/2">
               <p className="text-sm font-medium uppercase tracking-wider text-cyan-400 mb-2">
                 EVENT CREATION & SETUP
@@ -46,7 +44,6 @@ export default function GettingStarted() {
 
             </div>
 
-            {/* Right Column: Image (order-first on mobile to appear below text) */}
             <div className="flex justify-center lg:w-1/2">
               <img
                 src="https://placehold.co/600x450/111827/4f46e5?text=Platform+UI"

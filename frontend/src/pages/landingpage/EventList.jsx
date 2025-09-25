@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import EventCard from '../../components/attendee/EventCard';
 
-// --- ICONS ---
+
 const CalendarIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -17,7 +17,7 @@ const LocationIcon = () => (
 );
 
 
-// --- Skeleton Loader Component ---
+
 const SkeletonCard = () => (
     <div className="relative h-full overflow-hidden rounded-2xl bg-gray-900 p-6 animate-pulse">
         <div className="w-full h-48 bg-gray-800 rounded-lg"></div>
@@ -34,7 +34,6 @@ const SkeletonCard = () => (
 );
 
 
-// --- Main Upcoming Events Section Component ---
 const UpcomingEventsSection = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -50,11 +49,11 @@ const UpcomingEventsSection = () => {
         }
         const allEvents = await response.json();
         
-        // Filter for events that are in the future
+
         const upcoming = allEvents
           .filter(event => new Date(event.startDateTime) > new Date())
           .sort((a, b) => new Date(a.startDateTime) - new Date(b.startDateTime))
-          .slice(0, 4); // Get only the first 4
+          .slice(0, 4); 
 
         setEvents(upcoming);
       } catch (err) {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// --- Mail Icon for the input field ---
 const MailIcon = ({ className }) => (
   <svg
     className={className}
@@ -23,10 +22,8 @@ export default function Newsletter(){
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real app, you would send the 'email' state to your backend API here
     console.log(`Submitting email: ${email}`);
-    // You could also add logic to show a success message
-    setEmail(""); // Clear the input after submission
+    setEmail(""); 
   };
 
   return (

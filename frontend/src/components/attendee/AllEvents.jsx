@@ -3,7 +3,6 @@ import EventCard from './EventCard';
 import { SearchIcon, FilterIcon } from '../../helper/Icons.jsx'
 
 
-// --- Main AllEvents Page Component ---
 const AllEvents = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -67,7 +67,7 @@ const footerLinks = [
   },
 ];
 
-// --- Chevron Icon for Accordion ---
+
 const ChevronDownIcon = ({ className }) => (
   <svg
     className={className}
@@ -85,7 +85,7 @@ const ChevronDownIcon = ({ className }) => (
   </svg>
 );
 
-// --- Accordion Item for Mobile View ---
+
 const AccordionItem = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const id = title.replace(/\s+/g, "-").toLowerCase();
@@ -124,9 +124,7 @@ export default function Footer() {
     <div className="bg-black">
     <footer className="bg-black border-t border-gray-800 text-gray-400  overflow-y-auto">
       <div className="container mx-auto px-4 py-1">
-        {/* --- Desktop Footer (now a 5-column grid on large screens) --- */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Column 1: Platform */}
           <div>
             <h3 className="text-lg font-medium text-white mb-4">
               {footerLinks[0].title}
@@ -188,7 +186,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* --- Mobile Footer (remains the same) --- */}
         <div className="md:hidden">
           {footerLinks.map((section) => (
             <AccordionItem key={section.title} title={section.title}>
@@ -218,7 +215,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* --- Footer Bottom Bar --- */}
       <div className="bg-gray-900 py-4">
         <div className="container mx-auto px-4 text-center text-sm">
           <p>&copy; {year} StagePass. All Rights Reserved.</p>

@@ -2,8 +2,6 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
-
-// Import all your page components
 import Navbar from './pages/navbar/Navbar';
 import LandingPage from './pages/landingpage/LandingPage';
 import OnboardingPage from './Auth/Onboardingpage';
@@ -83,7 +81,6 @@ const App = () => {
           </ProtectedRoute>
         } />
 
-        {/* --- Catch-all 404 Route --- */}
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
       <Footer/>

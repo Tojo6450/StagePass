@@ -22,7 +22,6 @@ export default function Navbar() {
     setOpenMobileDropdown(openMobileDropdown === dropdownName ? null : dropdownName);
   };
 
-  // --- DYNAMICALLY BUILD NAVIGATION LINKS ---
   const navLinks = [
     { name: "Features", dropdown: true, id: "features", data: featuresMenu },
     { name: "Category", dropdown: true, id: "category", data: categoryMenu },
@@ -134,7 +133,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* --- COMPLETE MOBILE MENU --- */}
       <div
         className={`fixed top-0 right-0 w-full h-full bg-gray-50 text-black z-50 transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
