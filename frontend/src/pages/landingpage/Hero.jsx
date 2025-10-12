@@ -36,21 +36,18 @@ const HeroSection = () => {
                 Without the Stress.
               </span>
             </h1>
-            
-            {/* Decorative elements */}
+           
             <div className="absolute -top-4 -right-4 w-8 h-8 border-2 border-cyan-400 rounded-full opacity-60 animate-bounce" style={{ animationDelay: '0.5s' }}></div>
             <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-blue-500 rounded-full opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
           </div>
 
-          {/* Sub-headline paragraph with better typography */}
           <p className="mt-6 max-w-3xl text-lg sm:text-xl leading-relaxed text-gray-300 hover:text-gray-200 transition-colors duration-300">
             Launch your event site & mobile app in 
             <span className="text-cyan-400 font-semibold"> minutes</span>—no code, no clutter, no stress. 
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-semibold"> Powerful tools</span> to 
             boost registrations, manage sessions, engage attendees, and simplify check-in, without the steep learning curve or enterprise price tag.
           </p>
-
-          {/* Simple text indicators without button styling */}
+\
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <div className="flex items-center space-x-3">
               <div className="relative">
@@ -72,7 +69,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
+  
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
 
       <style jsx>{`
