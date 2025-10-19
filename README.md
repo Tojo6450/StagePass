@@ -4,7 +4,7 @@
 StagePass is an all-in-one platform for **creating** and **experiencing live events**.  
 Organizers get a powerful dashboard with real-time analytics and a QR code scanner, while attendees enjoy **secure payments** with Razorpay and **instant digital tickets** for a seamless event experience.
 
-[Event Registration Software](https://stage-pass-three.vercel.app/)
+[Deployed live link](https://stage-pass-three.vercel.app/)
 
 ---
 
