@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return <HeroSection />;
@@ -21,7 +22,9 @@ const HeroSection = () => {
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <p className="relative mb-4 text-sm font-bold uppercase tracking-widest text-cyan-400 px-6 py-3 border border-cyan-500/30 rounded-full bg-cyan-500/5 backdrop-blur-sm hover:border-cyan-400/50 hover:bg-cyan-500/10 transition-all duration-300">
-                <span className="relative z-10">Event Registration Software</span>
+                <Link href="/all-events" className="relative z-10">
+                  Event Registration Software
+              </Link>
               </p>
             </div>
           </div>
